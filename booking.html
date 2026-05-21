@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Room Booking - Serene Stay Hotel</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="booking">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">Serene Stay</a>
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Food Menu</a>
+        <a href="booking.html">Room Booking</a>
+        <a href="dashboard.html">Guest Dashboard</a>
+        <a href="admin.html">Admin Panel</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page-content">
+    <section class="page-intro">
+      <span class="eyebrow">Reserve Your Stay</span>
+      <h1>Room Booking</h1>
+      <p>Check room availability, select dates, and confirm your stay with transparent pricing in ₹.</p>
+    </section>
+
+    <section class="booking-grid">
+      <div class="booking-sidebar">
+        <h2>Booking Form</h2>
+        <form id="bookingForm" class="form-card">
+          <label for="guestName">Full Name</label>
+          <input type="text" id="guestName" name="guestName" required>
+
+          <label for="guestEmail">Email Address</label>
+          <input type="email" id="guestEmail" name="guestEmail" required>
+
+          <label for="roomSelect">Select Room</label>
+          <select id="roomSelect" name="roomSelect" required></select>
+
+          <label for="checkInDate">Check-in Date</label>
+          <input type="date" id="checkInDate" name="checkInDate" required>
+
+          <label for="checkOutDate">Check-out Date</label>
+          <input type="date" id="checkOutDate" name="checkOutDate" required>
+
+          <div class="booking-summary">
+            <p>Room Price: <span id="selectedPrice">₹0</span></p>
+            <p>Tax (12%): <span id="selectedTax">₹0</span></p>
+            <p class="total-line">Estimated Total: <strong id="selectedTotal">₹0</strong></p>
+          </div>
+
+          <button type="submit" class="button button-primary">Confirm Booking</button>
+          <p id="bookingMessage" class="form-message"></p>
+        </form>
+      </div>
+
+      <div class="booking-list">
+        <h2>Available Rooms</h2>
+        <div id="roomList" class="room-cards"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 Serene Stay Hotel.</p>
+      <nav class="footer-nav">
+        <a href="dashboard.html">Guest Dashboard</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

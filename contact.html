@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Serene Stay Hotel</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="contact">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">Serene Stay</a>
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Food Menu</a>
+        <a href="booking.html">Room Booking</a>
+        <a href="dashboard.html">Guest Dashboard</a>
+        <a href="admin.html">Admin Panel</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page-content">
+    <section class="page-intro">
+      <span class="eyebrow">Get in Touch</span>
+      <h1>Contact Us</h1>
+      <p>Send us your inquiry and we will respond promptly. Your comfort is our priority.</p>
+    </section>
+
+    <section class="contact-grid">
+      <div class="contact-info card">
+        <h2>Visit or Call</h2>
+        <p>123 Peace Avenue, Harmony Nagar, Bengaluru</p>
+        <p>Email: info@serenestay.com</p>
+        <p>Phone: +91 98765 43210</p>
+      </div>
+      <div class="contact-form card">
+        <form id="contactForm">
+          <label for="contactName">Full Name</label>
+          <input type="text" id="contactName" required>
+
+          <label for="contactEmail">Email Address</label>
+          <input type="email" id="contactEmail" required>
+
+          <label for="contactMessage">Message</label>
+          <textarea id="contactMessage" rows="5" required></textarea>
+
+          <button type="submit" class="button button-primary">Send Message</button>
+          <p id="contactConfirmation" class="form-message"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 Serene Stay Hotel.</p>
+      <nav class="footer-nav">
+        <a href="booking.html">Room Booking</a>
+        <a href="menu.html">Food Menu</a>
+      </nav>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

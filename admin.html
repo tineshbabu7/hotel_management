@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel - Serene Stay Hotel</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="admin">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">Serene Stay</a>
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Food Menu</a>
+        <a href="booking.html">Room Booking</a>
+        <a href="dashboard.html">Guest Dashboard</a>
+        <a href="admin.html">Admin Panel</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page-content">
+    <section class="page-intro">
+      <span class="eyebrow">Administration</span>
+      <h1>Admin Panel</h1>
+      <p>Login with the admin password to manage rooms, food items, and bookings.</p>
+    </section>
+
+    <section id="adminLoginSection" class="form-card admin-form">
+      <form id="adminLoginForm">
+        <label for="adminPassword">Admin Password</label>
+        <input type="password" id="adminPassword" name="adminPassword" required placeholder="Enter password">
+        <button type="submit" class="button button-primary">Login</button>
+        <p id="adminLoginMessage" class="form-message"></p>
+        <p class="form-message" style="color: var(--muted);">Demo password: <strong>admin123</strong></p>
+      </form>
+    </section>
+
+    <section id="adminPanelSection" class="admin-panel hidden">
+      <div class="admin-grid">
+        <div class="panel-card">
+          <h2>Room Management</h2>
+          <form id="roomForm" class="small-form">
+            <label for="roomType">Room Type</label>
+            <input type="text" id="roomType" required>
+            <label for="roomDescription">Description</label>
+            <input type="text" id="roomDescription" required>
+            <label for="roomPrice">Price in ₹</label>
+            <input type="number" id="roomPrice" min="1000" required>
+            <button type="submit" class="button button-secondary">Add Room</button>
+          </form>
+          <div id="roomAdminMessage" class="form-message"></div>
+          <div id="roomAdminList"></div>
+        </div>
+
+        <div class="panel-card">
+          <h2>Food Management</h2>
+          <form id="foodForm" class="small-form">
+            <label for="foodName">Food Name</label>
+            <input type="text" id="foodName" required>
+            <label for="foodCuisine">Cuisine Type</label>
+            <select id="foodCuisine">
+              <option>Indian</option>
+              <option>Chinese</option>
+              <option>Continental</option>
+              <option>Street Food</option>
+            </select>
+            <label for="foodPrice">Price in ₹</label>
+            <input type="number" id="foodPrice" min="50" required>
+            <button type="submit" class="button button-secondary">Add Food Item</button>
+          </form>
+          <div id="foodAdminMessage" class="form-message"></div>
+          <div id="foodAdminList"></div>
+        </div>
+      </div>
+
+      <div class="admin-grid" style="margin-top: 1.5rem; grid-template-columns: 1fr 1fr;">
+        <div class="panel-card">
+          <h2>Room Requests</h2>
+          <div id="roomRequestList"></div>
+        </div>
+        <div class="panel-card">
+          <h2>Food Requests</h2>
+          <div id="foodRequestList"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 Serene Stay Hotel.</p>
+      <nav class="footer-nav">
+        <a href="dashboard.html">Guest Dashboard</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
